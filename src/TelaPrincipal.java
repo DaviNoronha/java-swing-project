@@ -18,9 +18,13 @@ public class TelaPrincipal extends JFrame implements ActionListener{
 		janela.setTitle("Notas de Futebol");
 		janela.setBounds(100,100,800,600);
 
+		ImageIcon iconImage = new ImageIcon(TelaPrincipal.class.getResource("/Resources/Assets/ballicon.png"));
+		Image icon = iconImage.getImage().getScaledInstance(1800, 1800, Image.SCALE_SMOOTH);
+		janela.setIconImage(icon);
 		ImageIcon imagem = new ImageIcon(TelaPrincipal.class.getResource("/Resources/Assets/wallpaper.png"));
 		Image redimensionadora = imagem.getImage().getScaledInstance(800, 600, Image.SCALE_SMOOTH);
 		imagem = new ImageIcon(redimensionadora);
+
 		JLabel lab = new JLabel();
 
 		lab.setIcon(imagem);
