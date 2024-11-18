@@ -1,6 +1,4 @@
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
@@ -43,7 +41,7 @@ public class TelaCadastro implements ActionListener {
 
 		lbcod.setBounds(20, 30, 70, 30);
 		txtcod.setBounds(90, 30, 140, 30);
-		txtcod.disable();
+		txtcod.setEnabled(false);
 		jbatleta.setBounds(230, 30, 100, 30);
 		jbatleta.addActionListener(this);
 		jbatleta.setEnabled(true);
