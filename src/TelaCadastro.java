@@ -3,9 +3,9 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class TelaCadastro implements ActionListener {
-
 	ListaAtleta lista;
 	Atleta atleta;
 	int cont=0;
@@ -97,7 +97,7 @@ public class TelaCadastro implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		if(jbsalvar == e.getSource()) {
-			if (txtnome.getText() == null || txtfuncao.getText() == null || txttime.getText() == null || txtgols.getText() == null || txtassists.getText() == null || txtnome.getText() == null) {
+			if (Objects.equals(txtnome.getText(), "") || Objects.equals(txtfuncao.getText(), "") || Objects.equals(txttime.getText(), "") || Objects.equals(txtgols.getText(), "") || Objects.equals(txtassists.getText(), "") || Objects.equals(txtnota.getText(), "")) {
 				JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
 			} else {
 				atleta = new Atleta();
